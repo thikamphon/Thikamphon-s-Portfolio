@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "daisyui";
+
+@layer components {
+    .btn {
+      @apply h-10 min-h-10
+    }
+  }
