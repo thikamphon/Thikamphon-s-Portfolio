@@ -1,46 +1,43 @@
+<script setup>
+import { useDataStore } from '@/stores/Data'
+
+const dataStore = useDataStore()
+</script>
 <template>
-    <section class="pb-14 mx-14">
-        <h1 class="font-bold text-2xl mb-4">
-            Education
-        </h1>
-        <div class="timeline pl-8">
-                <div class="timeline-start mb-10">
-                    <div class="text-lg font-bold">
-                        <span class="flex gap-2 items-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                class="h-5 w-5">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            Bachelor of Science
-
-                        </span>
-                    </div>
-                    <div class="italic">King Mongkut's University of Technology Thonburi.</div>
-                    <div class="badge bg-white text-slate-800">2018 - 2022</div>
-                    <div>- Major in Media Technology</div>
-                    <div class="text-sm italic">course</div>
-                    <div>
-                        <div class="badge badge-outline mr-2">Game Development</div>
-                        <div class="badge badge-outline mr-2">Unity</div>
-                        <div class="badge badge-outline mr-2">Web Development</div>
-                        <div class="badge badge-outline">Arduino</div>
-                    </div>
-
-                </div>
+    <!-- Education -->
+    <section class="max-w-screen-lg w-full flex px-4 items-center timeline timeline-snap-icon timeline-vertical">
+        <div class="relative w-full h-full flex items-center justify-center mt-28">
+            <h2 class="absolute opacity-20 text-7xl font-bold mb-8">Education</h2>
+            <h2 class="text-4xl text-slate-50 font-bold mb-8">Education</h2>
         </div>
 
-
-        <!-- Science and Mathematics Program
-        Suankularb Wittyalai Thonburi School
-        2013 - 2018
-
-        - GPAX: 3.67 -->
+        <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+            <li v-for="(school, index) in dataStore.educations">
+                <hr v-if="index > 0 ? 'hidden' : ''" class="bg-violet-500">
+                <div class="timeline-middle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div :class="index % 2 === 0 ? 'timeline-end' : 'timeline-start md:text-end'">
+                    <time class="font-mono italic mx-2">{{ school.granduate }}</time>
+                    <div class="timeline-box bg-neutral max-w-lg shadow-2xl">
+                        <div class="text-md font-bold">{{ school.school }}</div>
+                        <div class="text-sm italic text-gray-500">{{ school.major }}</div>
+                        <div v-if="school.gpax !== '' ? 'hidden' : 'my-4'" class="badge badge-outline">{{
+                            school.ranges
+                        }}
+                        </div><br>
+                        <div v-if="school.gpax !== '' ? 'hidden' : ''"
+                            class="badge bg-base-content text-base-300 mt-4 font-semibold">GPAX: {{ school.gpax }}
+                        </div>
+                        <div class="my-4">{{ school.about }}</div>
+                    </div>
+                </div>
+                <hr class="bg-violet-500" />
+            </li>
+        </ul>
     </section>
 </template>
-
-<style scoped>
-li {
-    @apply grid-cols-1
-}
-</style>

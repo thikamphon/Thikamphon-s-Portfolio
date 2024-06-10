@@ -4,8 +4,19 @@
 
 @import "daisyui";
 
-@layer components {
-    .btn {
-      @apply h-10 min-h-10
-    }
+@layer base {
+  .leading-0 {
+    line-height: 0.25rem
   }
+
+  .hover {
+    @apply hover:opacity-60 duration-300
+  }
+}
+
+@layer components {
+  .btn {
+    @apply h-10 min-h-10
+  }
+
+}
