@@ -36,7 +36,7 @@ export const useDataStore = defineStore('data', {
       {
         school: 'King Mongkut’s University of Technology Thonburi (KMUTT)',
         major: 'Bachelor of Science - History and Design, Major in Media Technology, Specializing in Game Development',
-        granduate: '2018',
+        granduate: '2022',
         ranges: '2018-2022',
         gpax: '3.11',
         about: 'I graduated from the Media Technology University, Faculty of Architecture and Design, with a major in Media Technology focusing on Game Development. Over the course of four years, I honed my skills in coding specifically for game development. During my third year, I expanded my knowledge to include web development, gaining a broader understanding of the digital landscape.',
