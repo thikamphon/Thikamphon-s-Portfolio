@@ -35,8 +35,8 @@ const downloadFile = () => {
                             world.
                             Thank you for visiting my portfolio, and I look forward to connecting with you!
                         </p>
-                        <button @click="downloadFile" class="btn hover bg-violet-500 text-white w-fit px-8">Check
-                            Resume</button>
+                        <a href="https://drive.google.com/file/d/1W67O6gr1mCLMK083rKTKYfFx40Cw1MBZ/view" target="_blank" class="btn hover bg-violet-500 text-white w-fit px-8">Check
+                            Resume</a>
                     </div>
                 </div>
             </div>
