@@ -18,7 +18,7 @@ import Footer from '@/components/Footer.vue'
             </div>
             <span class="w-fit">RB</span>
           </span>
-          <a href="" class="btn bg-violet-500 text-white w-fit">github profile</a>
+          <a href="https://github.com/thikamphon" target="_blank" class="btn bg-violet-500 text-white w-fit">github profile</a>
         </div>
       </div>
       <AboutMe />
