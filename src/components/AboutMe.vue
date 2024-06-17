@@ -22,7 +22,7 @@ const downloadFile = () => {
                             Hi, I'm Thikamphon Rabaibpho.
                         </h2>
                         <TypingText class="text-violet-500 text-2xl md:text-4xl font-bold"
-                            text="Frontend Development" />
+                            text="Frontend Developer" />
                         <p class="py-6 md:text-lg">
                             I graduated from King Mongkut's University of Technology Thonburi (KMUTT) with a branch in
                             Media
