@@ -1,8 +1,17 @@
 import { defineStore } from 'pinia'
+import pngTodo from '../assets/Todo.png'
+import squareGame from '../assets/Game-click-square.png'
 
 export const useDataStore = defineStore('data', {
   state: () => ({
     projects: [
+      {
+        link: 'https://mock-todo-list.vercel.app/',
+        imageUrl: pngTodo,
+        title: 'Todo-List',
+        about: 'This project used mockapi.io to make the Todo-list.can be edit, delete and add.',
+        tags: ['Vue', 'Tailwind', 'Daisy.UI'],
+      },
       {
         link: 'https://thikamphon.github.io/multi-step-form/',
         imageUrl: 'https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Screenshots/oswvtcsjqgxswvdy1cgt.jpg',
@@ -31,12 +40,27 @@ export const useDataStore = defineStore('data', {
         about: 'Calculate ages Program on website by basic skill of web development',
         tags: ['HTML', 'CSS', 'JS'],
       },
+      {
+        link: 'https://thikamphon.github.io/sunnyside-landing-page/',
+        imageUrl: 'https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Screenshots/wpsrtpflv1nj4hkwptmr.jpg',
+        title: 'Landing page',
+        about: "This one is the Landing page, responsive. style website used hero is hero overlay. There're many things to learn from this project.",
+        tags: ['HTML', 'CSS', 'JS']
+      },
+      {
+        link: 'https://thikamphon.github.io/game-click-square/',
+        imageUrl: squareGame,
+        title: 'Click Square!!',
+        about: 'The basic game on web site for web dev for learning web.',
+        tags: ['HTML', 'CSS', 'JS', 'University'],
+      },
+      
     ],
     educations: [
       {
         school: 'King Mongkut’s University of Technology Thonburi (KMUTT)',
         major: 'Bachelor of Science - History and Design, Major in Media Technology, Specializing in Game Development',
-        granduate: '2022',
+        granduate: '2018',
         ranges: '2018-2022',
         gpax: '3.11',
         about: 'I graduated from the Media Technology University, Faculty of Architecture and Design, with a major in Media Technology focusing on Game Development. Over the course of four years, I honed my skills in coding specifically for game development. During my third year, I expanded my knowledge to include web development, gaining a broader understanding of the digital landscape.',
@@ -60,3 +84,12 @@ export const useDataStore = defineStore('data', {
     ]
   })
 })
+
+
+// fetch('/src/assets/projects.json')
+//       .then(response => response.json())
+//       .then(data => {
+//         this.projects = data;
+//       })
+//       .catch(error => console.error('Error fetching projects:', error));
+//   }
