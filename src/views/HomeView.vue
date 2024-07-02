@@ -11,25 +11,24 @@ import Footer from '@/components/Footer.vue'
     <div class="w-full h-full bg-base-100 max-w-screen-lg mx-auto border border-none rounded-3xl">
       <div class="navbar rounded-t-3xl bg-base-200">
         <div class="w-full mx-auto flex justify-between">
-          <span class="flex font-bold text-xl ml-2 gap-0 py-0 text-slate-100">
+          <span class="flex font-bold text-xl ml-2 gap-0 py- text-slate-100">
             Thikamphon
             <div class="w-fit font-extrabold text-amber-400">
               .
             </div>
             <span class="w-fit">RB</span>
           </span>
-          <a href="https://github.com/thikamphon" target="_blank" class="btn bg-violet-500 text-white w-fit">github profile</a>
+          <a href="" class="btn bg-violet-500 text-white w-fit">github profile</a>
         </div>
       </div>
       <AboutMe />
       <div class="w-full flex flex-col gap-y-8 items-center">
         <Skills />
-        <Education />
-      </div>
-      <div class="w-full flex flex-col gap-y-8 items-center">
         <Project />
+        <Education />
+        
       </div>
-      <Footer/>
+      <Footer />
     </div>
   </div>
 
