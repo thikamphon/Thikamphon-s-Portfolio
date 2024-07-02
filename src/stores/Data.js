@@ -84,12 +84,3 @@ export const useDataStore = defineStore('data', {
     ]
   })
 })
-
-
-// fetch('/src/assets/projects.json')
-//       .then(response => response.json())
-//       .then(data => {
-//         this.projects = data;
-//       })
-//       .catch(error => console.error('Error fetching projects:', error));
-//   }
