@@ -11,18 +11,18 @@ const downloadFile = () => {
 <template>
     <!-- about me -->
     <section class="w-full flex flex-col gap-y-8 items-center px-4">
-        <div class="hero max-w-screen-lg">
+        <div class="hero max-w-screen-lg mt-8">
             <div class="hero-content flex-col lg:flex-row-reverse">
                 <img src="https://www.jobbkk.com/upload/jobseeker/01/121/4B7121/images/4944161.jpg?v=1717588358?v=1717588358"
                     class="max-w-sm rounded-full shadow-2xl" />
                 <div class="card my-8 min-h-80 bg-neutral text-neutral-content shadow-2xl  lg:mx-0">
                     <div class="card-body">
                         <h2
-                            class="text-white text-xl sm:text-2xl md:text-3xl font-semibold tracking-tighter leading-0 sm:leading-3">
+                            class="text-white text-xl sm:text-2xl md:text-3xl font-semibold">
                             Hi, I'm Thikamphon Rabaibpho.
                         </h2>
                         <TypingText class="text-violet-500 text-2xl md:text-4xl font-bold"
-                            text="Frontend Developer" />
+                            text="Frontend Development" />
                         <p class="py-6 md:text-lg">
                             I graduated from King Mongkut's University of Technology Thonburi (KMUTT) with a branch in
                             Media
@@ -35,8 +35,8 @@ const downloadFile = () => {
                             world.
                             Thank you for visiting my portfolio, and I look forward to connecting with you!
                         </p>
-                        <a href="https://drive.google.com/file/d/1W67O6gr1mCLMK083rKTKYfFx40Cw1MBZ/view" target="_blank" class="btn hover bg-violet-500 text-white w-fit px-8">Check
-                            Resume</a>
+                        <button @click="downloadFile" class="btn hover bg-violet-500 text-white w-fit px-8">Check
+                            Resume</button>
                     </div>
                 </div>
             </div>
